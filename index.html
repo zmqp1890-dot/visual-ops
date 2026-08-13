@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="人工与 AI 协作的商业摄影视觉策划全案工作流">
+  <meta name="color-scheme" content="light dark">
+  <title>VISUAL OPS — 商业摄影视觉策划 AI 工作流</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <header class="topbar">
+    <a class="brand" href="#overview" aria-label="返回总览"><span>V/O</span> VISUAL OPS</a>
+    <div class="top-meta"><span>HUMAN × AI</span><span>PLAYBOOK 01</span><span id="clock">--:--</span></div>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">目录</button>
+  </header>
+
+  <nav class="tabs" id="mainNav" aria-label="工作流章节">
+    <button data-tab="overview" class="active"><i>00</i>总览</button>
+    <button data-tab="brief"><i>01</i>Brief 诊断</button>
+    <button data-tab="directions"><i>02</i>创意方向</button>
+    <button data-tab="develop"><i>03</i>方案深化</button>
+    <button data-tab="production"><i>04</i>拍摄执行</button>
+    <button data-tab="feedback"><i>05</i>客户闭环</button>
+    <button data-tab="memory"><i>06</i>视觉记忆</button>
+    <button data-tab="kit"><i>07</i>Prompt & Tools</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="overview" data-title="总览">
+      <div class="hero grid-paper">
+        <div class="eyebrow">COMMERCIAL PHOTOGRAPHY · AI CREATIVE SYSTEM</div>
+        <h1>从一份<br><span>BRIEF</span><br>到可拍摄的<br>视觉系统</h1>
+        <p class="hero-copy">一套可重复执行的人机协作方法。AI 负责扩展、模拟、结构化与提速；人负责判断、取舍、审美与最终责任。</p>
+        <div class="tape tape-a">先定义问题<br>再寻找画面</div>
+        <div class="stamp">8 WORKBENCHES<br>4 DECISION GATES</div>
+      </div>
+
+      <div class="section-intro">
+        <p class="kicker">PROJECT LIFECYCLE / 项目全生命周期</p>
+        <h2>从接收 Brief 到资产沉淀的完整项目流程。</h2>
+        <p>这里包含品牌决策、创意策划、制片、拍摄后期、交付和复盘，是整场商业拍摄的主流程。点击节点可以进入对应的方法页面。</p>
+      </div>
+
+      <div class="flow-map dark-grid" aria-label="完整工作流程">
+        <button class="flow-node human" data-jump="brief"><b>01</b><span>接收 Brief</span><small>人工确认事实与边界</small></button>
+        <span class="arrow">→</span>
+        <button class="flow-node ai" data-jump="brief"><b>02</b><span>AI 诊断</span><small>拆解、缺口、风险、机会</small></button>
+        <span class="arrow">→</span>
+        <button class="flow-node hybrid" data-jump="directions"><b>03</b><span>三方向提案</span><small>品牌 / 安全 / 突破</small></button>
+        <span class="arrow">→</span>
+        <button class="flow-node gate" data-jump="feedback"><b>G1</b><span>客户选向</span><small>锁定一主一备</small></button>
+        <span class="arrow">→</span>
+        <button class="flow-node hybrid" data-jump="develop"><b>04</b><span>视觉深化</span><small>场景、人物、光色、造型</small></button>
+        <span class="arrow">→</span>
+        <button class="flow-node gate" data-jump="feedback"><b>G2</b><span>视觉定案</span><small>冻结审美变量</small></button>
+        <span class="arrow">→</span>
+        <button class="flow-node hybrid" data-jump="production"><b>05</b><span>执行预演</span><small>分镜、Shot list、测试</small></button>
+        <span class="arrow">→</span>
+        <button class="flow-node gate" data-jump="production"><b>G3</b><span>制片确认</span><small>预算、场地、人员、版权</small></button>
+        <span class="arrow">→</span>
+        <button class="flow-node human" data-jump="production"><b>06</b><span>拍摄 / 后期</span><small>现场判断与质量控制</small></button>
+        <span class="arrow">→</span>
+        <button class="flow-node gate" data-jump="feedback"><b>G4</b><span>交付复盘</span><small>验收 + 学习</small></button>
+        <span class="arrow">→</span>
+        <button class="flow-node ai" data-jump="memory"><b>07</b><span>资产沉淀</span><small>可检索视觉记忆</small></button>
+      </div>
+
+      <div class="legend">
+        <span><i class="dot human"></i>人工主导</span><span><i class="dot ai"></i>AI 主导</span><span><i class="dot hybrid"></i>人机协作</span><span><i class="dot gate"></i>决策门</span>
+      </div>
+
+      <section class="six-stage-system">
+        <div class="six-stage-head"><p class="kicker">HUMAN × AI CREATIVE WORKFLOW / 策划与AI的六步协同工作流</p><h2>上面是项目全流程，<br>下面是策划 × AI 六步协同。</h2><p>上方是商业拍摄的完整项目生命周期；下面六步聚焦前期视觉策划如何调用AI、由人工完成判断，并在每一步形成可交付成果。顶部八个页面则是随时查询具体方法的工作台。</p></div>
+        <div class="six-stage-flow">
+          <article><span>01 · 理解</span><h3>Brief 诊断</h3><p>理解品牌、产品、传播目标、拍摄需求与信息缺口。</p><b>交付物</b><small>《项目视觉创意输入表》＋《客户补问清单》</small></article>
+          <i>→</i><article><span>02 · 寻找</span><h3>视觉研究</h3><p>围绕品牌、产品和拍摄类型研究视觉语境，建立可用参考。</p><b>交付物</b><small>《视觉检索矩阵》＋分类型参考板</small></article>
+          <i>→</i><article><span>03 · 想法</span><h3>创意方向</h3><p>提出三个区隔清楚的方向，并由人工与品牌方完成选向。</p><b>交付物</b><small>三张完整方向卡＋《方向选择记录》</small></article>
+          <i>→</i><article><span>04 · 看见</span><h3>AI 视觉预演</h3><p>把选定概念发展为人物、场景、造型、产品融合与构图参考。</p><b>交付物</b><small>概念视觉图＋完整八层视觉方案</small></article>
+          <i>→</i><article><span>05 · 落地</span><h3>分镜与执行策划</h3><p>策划把视觉方案转成可计算、可排期、可供制片与现场使用的画面任务。</p><b>交付物</b><small>平面 Shot List＋视频分镜/镜头表＋可行性检查</small></article>
+          <i>→</i><article><span>06 · 表达</span><h3>提案、签核与记忆</h3><p>把内容编排成对应阶段的PPT，完成客户签核；项目结束后由AI辅助提炼可复用经验。</p><b>交付物</b><small>阶段提案PPT＋已签核执行包＋视觉记忆候选条目</small></article>
+        </div>
+      </section>
+
+      <div class="split-cards">
+        <article class="big-card"><span class="num">20%</span><h3>AI 扩散</h3><p>快速理解资料、提出可能性、生成检索词和概念画面、建立版本。</p></article>
+        <article class="big-card inverse"><span class="num">80%</span><h3>人的判断</h3><p>品牌语境、文化分寸、真实可拍性、成本权衡、客户共识和最终审美。</p></article>
+        <aside class="sticky">比例不是工时。<br>它代表“最终决策权”。</aside>
+      </div>
+
+      <div class="checklist-block">
+        <div><p class="kicker">NEW PROJECT / 启动核对</p><h2>收到新 Brief 后，先确认这五项</h2><p>这不是要求五分钟完成策划，而是一张“能否开始解读 Brief”的基础核对单。资料暂时没有的项目可以标记待确认，不必强行补齐。</p></div>
+        <div class="checklist" id="quickChecklist">
+          <label><input type="checkbox"> 原始 Brief 与附件已归档</label>
+          <label><input type="checkbox"> 拍摄产品样衣、平铺图或现有产品资料已收到</label>
+          <label><input type="checkbox"> 拍摄类型、使用渠道、交付时间与预算范围已知或已标待确认</label>
+          <label><input type="checkbox"> 品牌禁区、版权与 AI 使用边界明确</label>
+          <label><input type="checkbox"> 客户决策人和反馈机制明确</label>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="brief" data-title="Brief 诊断">
+      <div class="chapter-head"><span>01</span><div><p>BRIEF IN → CREATIVE INPUT OUT</p><h1>AI 先读懂资料，<br>再开始想创意</h1></div><aside class="sticky">本页只有一个目的：<br>把零散 Brief 整理成后续创意真正可用的输入。</aside></div>
+
+      <div class="brief-sequence" aria-label="Brief诊断的输入输出关系">
+        <article><span>1 / 用户提供</span><b>品牌方原始资料</b><p>文件可能完整，也可能只有几页 Brief、产品图和参考图。</p></article><i>→</i>
+        <article><span>2 / AI 解读</span><b>提取、归纳、标记缺失</b><p>不创作、不脑补，把同一信息整理到统一栏目。</p></article><i>→</i>
+        <article><span>3 / 人工确认</span><b>修正理解与补充重点</b><p>策划确认 AI 有没有误读；必要问题再向品牌方追问。</p></article><i>→</i>
+        <article><span>4 / 确认输出</span><b>《项目视觉创意输入表》</b><p>作为三方向创意的依据，同时保存进项目视觉记忆。</p></article>
+      </div>
+
+      <div class="two-col">
+        <article class="card"><p class="kicker">A. 用户通常上传什么</p><h2>原始 Brief 资料包</h2><ul class="lined-list"><li><b>品牌资料：</b>品牌介绍、定位、品牌语气、历史视觉或品牌手册；有多少传多少</li><li><b>本次项目说明：</b>为什么拍、准备在什么时间或节点发布、希望解决什么传播问题</li><li><b>拍摄产品：</b>样衣、平铺图、商品图、款式清单或系列介绍；初期只需帮助判断款式与整体风格，不要求色号、尺码等生产级资料</li><li><b>拍摄需求：</b>Banner、Lookbook、节庆、季度、生活方式、静物等类型，以及平面 / 视频的大概范围</li><li><b>使用场景：</b>官网、电商、社交媒体、门店、广告投放等已知渠道</li><li><b>视觉参考：</b>品牌方提供的图片或视频；最好补充喜欢与不喜欢的具体原因</li><li><b>已知条件：</b>预算范围、时间、拍摄城市、指定模特或场地等；没有的信息统一标“待确认”</li></ul></article>
+        <article class="card dark"><p class="kicker">B. AI 到底要做什么</p><h2>不是另写一份 Brief，而是结构化解读</h2><ul class="lined-list"><li>从不同文件中提取相同主题的信息，合并重复内容</li><li>区分“品牌方明确写出的事实”“AI 根据资料作出的理解”“仍缺少的信息”</li><li>分析品牌语气、产品整体风格和参考图共同指向的视觉倾向</li><li>把抽象词翻译成后续可工作的视觉含义，并保留原话作为依据</li><li>找出影响创意方向的矛盾或模糊点，例如想要真实生活感，同时参考图却高度棚拍</li><li>只生成必要的确认问题，不要求品牌方在创意前提供不需要的生产细节</li></ul><p class="note-line">输出必须可追溯：每项结论都标注“来自哪份资料 / 哪页 / 哪张参考图”，没有依据就标记为待确认。</p></article>
+      </div>
+
+      <div class="framework brief-output">
+        <p class="kicker">CONFIRMED OUTPUT / 《项目视觉创意输入表》</p>
+        <h2>这是 AI 诊断后真正要交付的结构化表格</h2>
+        <p class="lead">它连接原始 Brief 与创意方向，也构成项目进入视觉记忆资产的第一份标准记录。每个栏目都同时保留：<b>Brief 原文 / AI 解读 / 信息来源 / 待确认项</b>。</p>
+        <div class="framework-grid brief-fields">
+          <div><b>01 项目背景</b><small>这是什么项目？新品、季度、节庆、品牌升级，还是日常内容拍摄？</small></div>
+          <div><b>02 本次传播目标</b><small>品牌方希望这次拍摄重点解决什么问题：建立认知、强化形象、解释产品或促进销售？</small></div>
+          <div><b>03 目标人群</b><small>主要给谁看？他们的生活状态、审美偏好和与产品的关系是什么？资料没写则标待确认。</small></div>
+          <div><b>04 品牌定位与语气</b><small>品牌希望以什么姿态说话？克制、自然、先锋、亲近或其他；同时列出不符合品牌的表达。</small></div>
+          <div><b>05 拍摄产品与系列风格</b><small>根据样衣、平铺图和系列说明，归纳款式类别、整体风格、主要设计特征及本次应重点呈现的产品。</small></div>
+          <div><b>06 产品信息与表达重点</b><small>Brief 已明确的卖点、穿着感受、设计亮点或工艺重点是什么？未提供的不自行编写。</small></div>
+          <div><b>07 拍摄内容与交付范围</b><small>拍摄类型、平面或视频、预计数量、画幅、时长与用途；初期不明确的项目列为待确认。</small></div>
+          <div><b>08 使用渠道与观看方式</b><small>官网、电商、社媒、门店或广告分别怎样使用？这些渠道会怎样影响构图、节奏和信息层级？</small></div>
+          <div><b>09 视觉参考解读</b><small>逐组写清品牌方具体喜欢参考图的场景、人物、构图、光线、色调、情绪或叙事，而不是只贴图片。</small></div>
+          <div><b>10 必须保留与明确避免</b><small>品牌识别、Logo、指定元素、禁用颜色、禁拍方式、竞品相似风险等已知边界。</small></div>
+          <div><b>11 已知制作条件</b><small>预算、时间、城市、指定资源等当前已知条件；仅记录会影响创意方向的约束。</small></div>
+          <div><b>12 创意开始前需补充确认的信息</b><small>原始 Brief 没有说明、但不同答案会直接改变创意方向的关键信息。例如主推哪组产品、主要投放渠道或某类视觉表达是否允许。AI 将它整理成问题清单，注明由谁回答、确认结果和确认日期；一般资料缺失不放在这里。</small></div>
+        </div>
+      </div>
+      <div class="brief-case" aria-label="Brief结构化解读示例">
+        <div class="case-label"><span>EXAMPLE / 01</span><b>一条信息如何被解读并留下依据</b></div>
+        <blockquote><small>BRIEF 原话 · 品牌语气</small>“松弛，但不随意。”<cite>品牌 Brief · P.4</cite></blockquote>
+        <div class="case-arrow">→</div>
+        <div class="case-reading"><small>AI 视觉转译</small><p>人物处于自然状态，不过度摆拍；构图和造型仍保持清晰秩序。</p><em>AI 正在把抽象语气翻译成可执行的摄影语言，不代表品牌已经这样定义。</em></div>
+        <div class="case-status"><span>下一步</span><b>先由策划复核</b><span>如原话仍有歧义</span><b>再向品牌确认</b><span>确认后</span><b>写入项目视觉创意输入表</b></div>
+      </div>
+      <div class="status-explainer"><b>这两个“确认”不是一回事</b><div><span><i>信息缺失</i>第12项：Brief 根本没有答案，需要向品牌方补充提问。</span><span><i>AI理解待复核</i>Example：Brief 有原话，但 AI 将它翻译成了摄影语言；先由策划判断是否合理，必要时再请品牌确认。</span><span><i>已确认</i>只有事实或视觉转译得到确认后，才作为后续三个创意方向的正式依据。</span></div></div>
+      <div class="decision-bar"><b>进入下一步的条件</b><span>不是所有信息都必须齐全。策划确认“我们为什么拍、给谁看、拍什么、品牌怎么说话、参考图喜欢什么、有哪些明确边界”后，即可让 AI 提供三个创意方向；其余内容继续标记待确认。</span></div>
+    </section>
+
+    <section class="panel" id="directions" data-title="创意方向">
+      <div class="chapter-head"><span>02</span><div><p>STRATEGIC TERRITORIES</p><h1>先提三个方向，<br>不要先堆参考图</h1></div><aside class="sticky pink">方向不是三套颜色。<br>必须是三种不同的叙事策略。</aside></div>
+      <div class="direction-grid">
+        <article class="direction"><span class="tag">A · BRAND CORE</span><h2>品牌延续</h2><p>继承品牌已有视觉资产，强化识别与一致性。适合主战役、稳健交付。</p><ul><li>熟悉的品牌代码</li><li>更清晰的产品利益</li><li>最低理解成本</li></ul></article>
+        <article class="direction selected"><span class="tag">B · BALANCED</span><h2>安全创新</h2><p>保留核心识别，引入一个明确的新鲜变量。适合季度大片和渠道扩展。</p><ul><li>一项叙事创新</li><li>一项摄影语言更新</li><li>可控生产复杂度</li></ul></article>
+        <article class="direction dark"><span class="tag">C · BREAKTHROUGH</span><h2>突破表达</h2><p>重新定义产品出现的语境，制造讨论与记忆。适合形象升级或社交传播。</p><ul><li>反常规文化洞察</li><li>更强形式概念</li><li>同步准备降落方案</li></ul></article>
+      </div>
+      <div class="section-intro"><p class="kicker">DIRECTION CARD / 每个方向固定回答 12 个问题</p><h2>三个方向使用同一结构，才能真正比较创意差异。</h2><p>“方向卡”是方向提案的内容模板，不是评分卡。它先让品牌方看懂每个方向讲什么、怎么拍、产品如何出现，再做选择。</p></div>
+      <div class="direction-table">
+        <div class="dt-head"><b>模块</b><b>这个模块要回答什么？</b><b>方向卡中要写到什么程度？</b></div>
+        <div><b>1. 方向名称</b><span>这个方向叫什么？</span><p>一个易记、能概括概念的工作名称；现阶段可以是提案名，不必等同最终 Campaign 标题。</p></div>
+        <div><b>2. 一句话概念</b><span>用一句话怎么讲清楚？</span><p>说清“谁 / 在什么情境 / 通过产品发生什么”，让没看参考图的人也能理解。</p></div>
+        <div><b>3. Brief 回应</b><span>它解决品牌的什么问题？</span><p>明确对应《项目视觉创意输入表》中的传播目标、目标人群与品牌语气，说明为什么不是一个脱离 Brief 的漂亮点子。</p></div>
+        <div><b>4. 产品角色</b><span>产品在故事中扮演什么？</span><p>产品是人物行动的起点、生活方式的一部分、关系线索，还是画面的视觉主角？同时说明重点呈现什么特点。</p></div>
+        <div><b>5. 目标情绪</b><span>希望消费者产生什么感受？</span><p>写具体的观看感受和情绪变化，例如“从克制疏离到放松靠近”，避免只写“高级感、氛围感”。</p></div>
+        <div><b>6. 主题叙述</b><span>世界观、主题和基本故事是什么？</span><p>用一小段话说明人物处境、故事开始、发展和落点；平面项目也要说明一组画面的内在关系。</p></div>
+        <div><b>7. 视觉关键词</b><span>3–6 个核心视觉词是什么？</span><p>关键词需能指导找图与生图，并附简短解释；例如“日常观察式”比单写“自然”更可执行。</p></div>
+        <div><b>8. 摄影语言</b><span>画面以什么观看方式被拍摄？</span><p>纪实、棚拍、时尚、电影感或静物等总体倾向，并简述构图距离、镜头状态和画面动静关系。</p></div>
+        <div><b>9. 场景预设</b><span>故事大概发生在哪里？</span><p>先提出空间类型与生活情境，如住宅、城市街道、工作室或自然环境；此时不需要锁定真实场地。</p></div>
+        <div><b>10. 人物与造型</b><span>什么样的人，以什么状态和服装出现？</span><p>描述人物气质、关系、行为状态及服装搭配方向，帮助品牌方理解这是谁的生活。</p></div>
+        <div><b>11. 色彩与光线</b><span>主要色调、光质和时间感是什么？</span><p>说明冷暖倾向、明暗关系、自然光或人工光、清晨 / 正午 / 黄昏等基本视觉感受。</p></div>
+        <div><b>12. 可行性与风险</b><span>为什么能拍？最大的风险是什么？</span><p>用创意策划层面的粗判断说明场景、人物、产品和预算是否匹配，并指出一个最可能影响落地的风险及替代思路。</p></div>
+      </div>
+      <div class="workflow-strip">
+        <div><b>AI 先做</b><p>从诊断单生成 3 个真正区隔的概念；为每个方向写检索词、图像 Prompt、视频 Prompt 与反向词。</p></div>
+        <div><b>人工再做</b><p>验证品牌相关性、文化准确性、可拍性与原创距离；删除“看起来很美但无产品作用”的方向。</p></div>
+        <div><b>素材怎么来</b><p>双轨并行：真实参考用于证明语境与工艺；AI 概念图用于表达尚不存在的组合。必须标注来源与用途。</p></div>
+      </div>
+      <div class="selection-block"><h3>方向怎样被选中？</h3><div><article><b>创意策划 / 美术指导</b><p>负责解释三个方向与 Brief 的关系、视觉差异、产品作用和执行条件，并给出专业推荐。</p></article><article><b>品牌方决策人</b><p>结合品牌目标和内部判断选定一个方向，也可以明确要求保留另一方向中的某个元素。</p></article><article><b>AI</b><p>只负责检查遗漏、并列差异和记录选择理由，不替策划或品牌方评分，也不拥有最终决定权。</p></article></div></div>
+      <div class="evaluation-section dark-grid">
+        <div class="evaluation-head"><p class="kicker">CREATIVE DIRECTION REVIEW / 创意方向评审</p><h2>创意方向评审<br>由各岗位共同完成。</h2><p>策划、品牌、摄影、美术、造型与制片围绕同一组专业问题进行讨论，并为判断写出具体依据；AI 只负责整理意见与差异。</p></div>
+        <div class="evaluation-map">
+          <div class="eval-core"><span>3 DIRECTIONS</span><b>专业评审</b><small>意见＋依据</small></div>
+          <article class="ev1"><i>01</i><h3>品牌调性一致性</h3><p>主题、人物、造型与摄影表达是否符合品牌定位、品牌语气及既有视觉资产？</p><small>品牌 / 策略 / 创意</small></article>
+          <article class="ev2"><i>02</i><h3>产品卖点呈现完整性</h3><p>主推款、设计特点和使用状态是否被清楚安排进故事与关键画面？</p><small>品牌 / 产品 / 电商 / 创意</small></article>
+          <article class="ev3"><i>03</i><h3>创意概念差异化</h3><p>主题与叙事是否区别于品牌过往项目及同类竞品，而不是常见形式的重复？</p><small>品牌 / 创意 / 美术指导</small></article>
+          <article class="ev4"><i>04</i><h3>目标客群沟通准确性</h3><p>人物状态、生活场景和情绪表达是否符合目标客群，并传递预期的品牌感受？</p><small>品牌 / 市场 / 内容 / 策略</small></article>
+          <article class="ev5"><i>05</i><h3>摄影视觉系统完整性</h3><p>场景、选角、造型、构图、光线与色调能否形成统一语言，并支持平面、视频和多画幅延展？</p><small>美术指导 / 摄影 / 造型 / 后期</small></article>
+          <article class="ev6"><i>06</i><h3>制作执行可行性</h3><p>场地、演员、置景、器材、预算与排期是否支持落地，主要制作风险是否有替代方案？</p><small>制片 / 摄影 / 美术 / 造型</small></article>
+        </div>
+      </div>
+      <div class="direction-conclusion"><b>本阶段输出 / 选定一个创意方向</b><span>品牌方确认方向名称、核心概念、产品角色、目标情绪与基本视觉倾向，并记录需要保留和调整的意见。下一步不再继续横向比较三个方向，而是进入 03「方案深化」，把选定方向依次发展为完整的概念、视觉、场景、人物造型、置景、光色与分镜方案。</span></div>
+    </section>
+
+    <section class="panel" id="develop" data-title="方案深化">
+      <div class="chapter-head"><span>03</span><div><p>SELECTED DIRECTION → COMPLETE CREATIVE PLAN</p><h1>方向选定后，<br>怎样一步步深化</h1></div><aside class="sticky">从“讲什么”到“怎么拍”。<br>每一层确认后，才进入下一层。</aside></div>
+      <div class="deepening-intro"><b>为什么要分层？</b><p>方向卡只帮助品牌方选择创意方向。选定后，策划再依次确定概念、视觉、场景、人物造型、置景道具、光线色彩、画面与分镜。这样每一步都有明确问题，也能知道 AI 在哪里提供帮助。</p></div>
+      <div class="layer-index" aria-label="八层深化索引"><span>01 概念</span><span>02 视觉</span><span>03 场景</span><span>04 人物</span><span>05 造型</span><span>06 置景</span><span>07 光色</span><span>08 分镜</span></div>
+      <div class="deepening-layers">
+        <article class="layer-card" data-step="01"><span>第 1 层</span><h2>概念深化</h2><div class="layer-columns"><div><h3>需要确定</h3><ul><li>正式主题名</li><li>核心文案</li><li>完整主题阐述</li><li>产品卖点与创意之间的关系</li><li>人物为什么出现在这个故事中</li><li>故事的开始、发展、转折和结束</li><li>平面与视频如何共享同一个概念</li></ul></div><div><h3>AI 可以辅助</h3><ul><li>提供概念叙述的不同版本</li><li>检查概念是否偏离 Brief</li><li>检查是否与竞品创意过于相似</li><li>生成主标题和副标题备选</li></ul></div><div><h3>本层输出</h3><p>《主题概念页》：正式主题名、核心文案、主题阐述、产品关系和完整故事线。</p></div></div></article>
+
+        <article class="layer-card dark"><span>第 2 层</span><h2>视觉系统</h2><div class="layer-columns"><div><h3>需要确定</h3><ul><li>视觉关键词</li><li>图片质感</li><li>摄影媒介</li><li>构图规律</li><li>景别规律</li><li>色彩比例</li><li>光线方向</li><li>画面动静关系</li><li>产品在画面里的视觉权重</li></ul></div><div><h3>怎样理解</h3><p>这一层不是直接选某张参考图，而是建立整组画面共同遵守的视觉规则。例如主要使用近距离观察还是完整环境构图；人物是面对镜头还是处于生活状态；产品何时突出、何时自然融入。</p></div><div><h3>AI 可以辅助</h3><ul><li>把关键词转成中英文找图词</li><li>生成同一主题下不同摄影语言的概念图</li><li>模拟不同构图、景别、光线和色彩方案</li><li>帮助检查平面与视频是否视觉一致</li></ul></div></div></article>
+
+        <article class="layer-card"><span>第 3 层</span><h2>场景与场地</h2><div class="layer-columns"><div><h3>需要确定</h3><ul><li>故事需要哪些场景</li><li>棚拍还是实景</li><li>场景之间如何转换</li><li>每个场景承担什么产品任务</li><li>真实场地必须具备哪些画面条件</li><li>是否有足够空间布光和移动机器</li></ul></div><div><h3>AI 可以辅助</h3><ul><li>把概念转成场景清单</li><li>生成场地搜索关键词</li><li>分析勘景照片</li><li>将产品或模特合成进场地预演</li><li>检查同一场地能否拍出多个画面</li></ul></div><div><h3>本层输出</h3><p>场景清单、场地条件、棚拍 / 实景判断、场景转换关系，以及每个场景需要呈现的产品内容。</p></div></div></article>
+
+        <article class="layer-card dark"><span>第 4 层</span><h2>人物、选角与动作状态</h2><div class="layer-columns"><div><h3>需要确定</h3><ul><li>人物画像：年龄感、气质、身份与生活状态</li><li>单人、双人或群像，以及人物之间的关系</li><li>选角更看重外形、气质还是表演能力</li><li>每个场景中的动作、状态与视线</li><li>人物如何真实地使用或穿着产品</li></ul></div><div><h3>AI 可以辅助</h3><ul><li>生成模特画像与选角关键词</li><li>根据场景生成动作参考</li><li>用不同人物组合预演画面关系</li><li>整理 Casting Brief；真人定选仍由人工完成</li></ul></div><div><h3>本层输出</h3><p>模特画像、Casting Brief、人物关系、动作状态参考和每个场景的表演说明。</p></div></div></article>
+
+        <article class="layer-card"><span>第 5 层</span><h2>服装搭配、妆发与整体造型</h2><div class="layer-columns"><div><h3>需要确定</h3><ul><li>不同场景分别穿哪组产品</li><li>服装搭配的轮廓、层次与色彩关系</li><li>鞋、包、首饰等配件如何配合</li><li>妆容、发型与人物状态是否一致</li><li>多个 Look 之间怎样变化又保持系列感</li></ul></div><div><h3>AI 可以辅助</h3><ul><li>根据产品平铺图生成搭配方向</li><li>将服装或产品合成到模特上预演</li><li>生成妆发与配件的搜索关键词</li><li>比较不同 Look 与场景、色调的匹配关系</li></ul></div><div><h3>本层输出</h3><p>按场景整理的 Styling Board、妆发参考、配件建议与 Look 对照表。</p></div></div></article>
+
+        <article class="layer-card dark"><span>第 6 层</span><h2>置景与道具</h2><div class="layer-columns"><div><h3>需要确定</h3><ul><li>场景中需要增加、替换或移除什么</li><li>哪些道具与人物行为或产品功能有关</li><li>道具的颜色、大小、位置和数量</li><li>棚拍背景、家具、植物或生活物件怎样组织</li><li>哪些是必须准备，哪些只是画面备选</li></ul></div><div><h3>AI 可以辅助</h3><ul><li>根据故事生成置景与道具清单</li><li>生成不同道具组合的概念预演</li><li>提供道具搜索关键词和替代方案</li><li>检查道具是否抢夺产品注意力</li></ul></div><div><h3>本层输出</h3><p>置景示意、道具清单、摆放关系、准备优先级与替代方案。</p></div></div></article>
+
+        <article class="layer-card"><span>第 7 层</span><h2>光线与色调</h2><div class="layer-columns"><div><h3>需要确定</h3><ul><li>整体是自然光还是人工布光的视觉感受</li><li>主要光线从哪个方向进入</li><li>光线偏柔和还是偏硬朗</li><li>画面的明暗、冷暖与主要颜色比例</li><li>不同场景是否需要时间变化</li><li>肤色、服装色和产品颜色怎样保持准确</li></ul></div><div><h3>AI 可以辅助</h3><ul><li>模拟同一画面的不同时间与光线方案</li><li>提取参考图的色彩关系</li><li>生成色板和调色方向示意</li><li>提醒产品颜色可能被环境色影响的位置</li></ul></div><div><h3>本层输出</h3><p>光线参考、色板、各场景的时间与明暗关系，以及现场拍摄和后期统一遵循的色调说明。</p></div></div></article>
+
+        <article class="layer-card dark"><span>第 8 层</span><h2>执行画面与视频分镜</h2><div class="layer-columns"><div><h3>需要确定</h3><ul><li>平面需要哪些具体画面和构图</li><li>每张画面承担什么产品或叙事任务</li><li>视频按什么顺序展开，人物怎样行动</li><li>每个镜头的景别、机位、运动与时长</li><li>平面和视频可以共用哪些场景、动作和布光</li><li>最终需要哪些画幅和文案留白</li></ul></div><div><h3>AI 可以辅助</h3><ul><li>根据故事生成 Shot List 初稿</li><li>生成不同角度和景别的构图参考</li><li>把静态分镜生成简单视频预演</li><li>检查产品、人物、场景和交付需求是否遗漏</li></ul></div><div><h3>本层输出</h3><p>平面执行画面表、视频分镜脚本、参考图 / AI 概念图、镜头说明，以及进入制片执行前的拍摄方案。</p></div></div></article>
+      </div>
+      <div class="reference-protocol dark-grid">
+        <h2>参考素材双轨制</h2>
+        <div><article><span>FOUND</span><h3>真实素材参考</h3><p>人工检索为主，AI 生成关键词、同义词和反向检索线索。用于证明场地、造型、光线、动作、材质和行业语境。</p><small>记录：来源 URL / 作者 / 日期 / 权利状态 / 只参考哪一点</small></article><article><span>MADE</span><h3>AI 概念参考</h3><p>用产品图、调性和人物设定生成不存在的画面组合。用于更快对齐“我们想拍什么”，不能冒充真实成片或授权参考。</p><small>记录：模型 / Prompt / Seed / 输入图 / 版本 / 允许用途</small></article></div>
+      </div>
+      <div class="decision-bar"><b>本阶段确认点 / 完整创意方案定稿</b><span>当品牌方确认主题概念、整体视觉、场景、人物、造型、置景、光线色调和执行画面后，方案才进入下一页的制片与拍摄执行。这里不是突然增加新的“产品角度”，而是确认前面八层是否已经形成一套前后一致、可以继续落地的方案。</span></div>
+    </section>
+
+    <section class="panel" id="production" data-title="拍摄执行">
+      <div class="chapter-head"><span>04</span><div><p>VISUAL BIBLE → SHOOTABLE PLAN</p><h1>好看只是开始。<br>必须真的能拍。</h1></div><aside class="sticky pink">概念图是意图，<br>Shot list 才是现场语言。</aside></div>
+      <div class="timeline">
+        <article><span>T−14</span><h3>Pre-vis</h3><p>AI 概念图、多角度预演、视频 animatic；摄影 / 美术 / 造型共同校正。</p></article>
+        <article><span>T−10</span><h3>Tech scout</h3><p>勘景、太阳轨迹、电力、噪音、运输、机位、模特动线、天气方案。</p></article>
+        <article><span>T−7</span><h3>Tests</h3><p>产品色、材质、妆发、服装、布光、镜头运动和生成画面的实拍可复现性。</p></article>
+        <article><span>T−3</span><h3>Lock</h3><p>PPM 定案，冻结 Shot list、call sheet、人员、道具、器材、版权与备选。</p></article>
+        <article><span>DAY 0</span><h3>Shoot</h3><p>先保 Must-have，再拍 Nice-to-have；DIT 现场备份、色彩管理和连续性记录。</p></article>
+        <article><span>T+1</span><h3>Post</h3><p>选片逻辑、修图 / 剪辑、调色、声音、字幕、生成式修补披露和多规格交付。</p></article>
+      </div>
+      <div class="shot-intro">
+        <div><p class="kicker">SHOT LIST / 拍摄任务清单</p><h2><span>把“想拍什么”，</span><span>变成可执行的画面任务。</span></h2></div>
+        <div class="shot-answers">
+          <article><b>它是干什么的？</b><p>Shot List 是创意方案确认后形成的逐画面任务表。它规定要拍哪些画面、每格服务什么产品或叙事目的、谁在什么场景完成，以及是否已经拍到。</p></article>
+          <article><b>为什么必须有？</b><p>它让创意、摄影、导演、制片、美术、造型、客户和后期围绕同一份清单协作，避免现场漏拍主推产品、重复布光、拍完才发现缺少横版或竖版素材。</p></article>
+          <article><b>什么时候使用？</b><p>视觉方案确认后、PPM与排期前开始建立；勘景和技术测试后补充；拍摄当天用于逐项核对；选片、剪辑和交付时继续用同一编号追踪。单张简单静物可使用精简版，多产品、多场景、平面＋视频项目必须使用完整版。</p></article>
+          <article><b>怎么使用？</b><p>策划先列“必须拍到”的画面，摄影/导演补充镜头方法，制片按场景、模特、造型和光线重排拍摄顺序；现场由执行制片或场记勾选完成状态，后期按编号对应素材。</p></article>
+        </div>
+      </div>
+      <div class="id-explainer"><b>ID 是什么？</b><p>ID 是每个画面或镜头的唯一编号，不是图片文件名本身。建议平面使用 <strong>P01、P02…</strong>，视频使用 <strong>V01、V02…</strong>；同一画面的横竖版本可写 P03-H / P03-V。提案、现场场记、选片、修改意见与交付文件都引用同一个 ID，团队才不会说错画面。</p></div>
+      <div class="shot-systems">
+        <article class="shot-system photo-system">
+          <div class="shot-system-head"><span>PHOTO / 平面</span><h2>平面 Shot List</h2><p>一行代表一张必须获得的最终画面任务，不等于摄影师实际按下快门的次数。</p></div>
+          <div class="shot-card photo-shot-card">
+            <div class="shot-thumb"><span>REFERENCE FRAME</span><b>P03-H</b><small>16:9 / HERO</small></div>
+            <div class="shot-core"><div class="shot-chips"><span>MUST HAVE</span><span>未完成</span><span>官网 BANNER</span></div><h3>门厅里的双人交错穿行</h3><p>主推外套 Look 02；用人物相向而行形成自然层次，同时保留右侧文案区。</p><dl><div><dt>景别 / 机位 / 构图</dt><dd>中远景 · 低机位 · 人物落左侧三分之一</dd></div><div><dt>摄影 / 光线</dt><dd>35mm感 · 侧逆自然光 · 保留深色面料层次</dd></div><div><dt>交付 / 裁切安全</dt><dd>横版16:9；同步预留4:5裁切；右侧不可被人物占用</dd></div></dl></div>
+            <aside><b>现场核对</b><label>□ 产品完整可见</label><label>□ 文案区安全</label><label>□ 横竖裁切成立</label><label>□ 色彩与材质准确</label><small>参考图 R07<br>场地 / 造型 / 光线组共同确认</small></aside>
+          </div>
+          <div class="shot-field-index"><b>完整记录字段</b><span>ID</span><span>交付用途 / 画幅</span><span>产品 / Look</span><span>场景 / 人物 / 动作</span><span>景别 / 机位 / 构图</span><span>摄影与光线</span><span>文案留白 / 裁切安全</span><span>优先级 / 状态</span><span>参考图 / 风险</span></div>
+        </article>
+        <article class="shot-system video-system">
+          <div class="shot-system-head"><span>VIDEO / 视频</span><h2>视频分镜＋镜头表</h2><p>分镜说明故事按什么顺序发生；镜头表说明每个镜头怎样拍。视频项目通常两者配套使用。</p></div>
+          <div class="video-strip">
+            <div class="video-frame"><span>V05 / 00:08–00:10</span><div>WIDE FRAME</div><b>人物进入门厅</b><small>大全景 · 固定</small></div>
+            <i>动作接</i>
+            <div class="video-frame active"><span>V06 / 00:10–00:13</span><div>KEY FRAME</div><b>经过镜面后回身</b><small>近景 · 稳定器向后跟随 · 3秒 / 25fps</small></div>
+            <i>视线接</i>
+            <div class="video-frame"><span>V07 / 00:13–00:15</span><div>DETAIL FRAME</div><b>衣料与产品细节</b><small>特写 · 轻微推进</small></div>
+          </div>
+          <div class="video-notes"><article><b>表演 / 产品</b><p>人物经过镜面后自然回身；主推外套轮廓始终可读。</p></article><article><b>声音 / 连续性</b><p>脚步与衣料声；V06接V07时保持视线、行进方向和手部位置一致。</p></article><article><b>现场风险</b><p>镜面穿帮、稳定器退行安全；必须拍，完成后由场记勾选。</p></article></div>
+          <div class="shot-field-index"><b>完整记录字段</b><span>ID / 故事顺序</span><span>场景 / 产品</span><span>动作 / 表演</span><span>景别 / 机位</span><span>镜头运动</span><span>时长 / 帧率</span><span>声音 / 台词</span><span>转场 / 连续性</span><span>优先级 / 状态 / 风险</span></div>
+        </article>
+      </div>
+      <div class="two-col">
+        <article class="card"><h2>现场人工主导</h2><ul class="lined-list"><li>真实肤色、产品颜色和材质是否准确</li><li>人物表演是否自然且符合文化语境</li><li>视觉是否服务产品，而非只复刻概念图</li><li>预算 / 时间变化下的优先级判断</li><li>安全、隐私、肖像权与素材备份</li></ul></article>
+        <article class="card"><h2>AI 可辅助</h2><ul class="lined-list"><li>Call sheet / Shot list 初稿与遗漏检查</li><li>现场参考快速变体、裁切模拟</li><li>文件命名、场记、转写、粗选标签</li><li>多画幅适配预览与粗剪节奏</li><li>禁止：未经确认改变产品结构或虚构功能</li></ul></article>
+      </div>
+      <div class="direction-conclusion"><b>本阶段输出 / 可执行拍摄包</b><span>创意方案在这里被转换为平面 Shot List、视频分镜/镜头表、场景与造型拍摄顺序、必要参考和风险备选。团队确认没有漏拍、资源与时间能够支持后，进入 05「客户闭环」完成制片签核；拍摄完成后的实际结果与经验再进入 06「视觉记忆」。</span></div>
+    </section>
+
+    <section class="panel" id="feedback" data-title="客户闭环">
+      <div class="chapter-head feedback-title"><span>05</span><div><p>DECISION SYSTEM</p><h1>把反馈变成决策，<br>把决策留下记录。</h1></div><aside class="sticky">不要收集“感觉”。<br>收集可执行的决策。</aside></div>
+      <div class="feedback-explain"><p class="kicker">5-STEP FEEDBACK LOOP / 五步反馈闭环</p><h2>这不是五个评估维度，<br>而是一套有顺序的工作动作。</h2><p>每轮反馈都按照 01→05 进行。未签核就回到 02或03继续处理，但不能跳过“解释”直接改图，也不能在多个聊天群里分别形成不同版本。</p></div>
+      <div class="feedback-steps dark-grid">
+        <article><span>01</span><h3>呈现本轮方案</h3><p><b>做什么：</b>先说明版本号、本轮要看什么，以及本轮只需要决定什么。</p><p><b>参与：</b>创意策划/美术指导主讲；品牌决策人及相关执行负责人参加。</p><small>产物：评审范围＋提案版本</small></article><i>→</i>
+        <article><span>02</span><h3>集中收集原始反馈</h3><p><b>做什么：</b>保留客户原话，统一汇总，不急着改写；不同部门意见并列记录。</p><p><b>参与：</b>品牌方指定接口人汇总；策划记录。</p><small>产物：原始反馈清单</small></article><i>→</i>
+        <article><span>03</span><h3>翻译成视觉问题</h3><p><b>做什么：</b>追问模糊意见，把“高级一点”等表达转成场景、构图、人物、造型、光线或色调等具体变量。</p><p><b>参与：</b>策划/美术指导主导；摄影、造型、制片评估影响。</p><small>产物：可执行修改项＋影响说明</small></article><i>→</i>
+        <article><span>04</span><h3>改版并记录差异</h3><p><b>做什么：</b>按确认项修改，保留旧版本；记录改了什么、为什么改以及成本/排期变化。</p><p><b>参与：</b>对应执行岗位修改；策划控制整体一致性。</p><small>产物：新版本＋变更记录</small></article><i>→</i>
+        <article><span>05</span><h3>签核本轮结论</h3><p><b>做什么：</b>确认通过、继续修改或否决，并写清最终范围、责任人和日期。</p><p><b>参与：</b>品牌决策人签核；策划/制片归档。</p><small>产物：签核记录＋下一步</small></article>
+      </div>
+      <div class="gate-intro"><p class="kicker">WHEN TO USE / 这套五步闭环要重复使用四次</p><h2>方法相同，<br>每轮决定的内容不同。</h2><p>下面 G1—G4 是项目中的四个签核时点。每到一个时点，都完整执行一次“呈现→收集→翻译→改版→签核”，不能把上一轮确认自动当成下一轮确认。</p></div>
+      <div class="gate-grid">
+        <article><span>G1</span><h3>方向选择</h3><p>选一主一备；确认主题、单一命题、预算级别。此时不讨论具体道具颜色。</p></article>
+        <article><span>G2</span><h3>视觉定案</h3><p>确认场景、人物、光色、造型、产品表现与参考边界。</p></article>
+        <article><span>G3</span><h3>制片定案</h3><p>确认 Shot list、场地、团队、排期、费用、版权、天气与 B 计划。</p></article>
+        <article><span>G4</span><h3>交付验收</h3><p>确认选片、修图 / 剪辑范围、规格、命名、版权文件和复盘。</p></article>
+      </div>
+      <div class="feedback-template">
+        <div><p class="kicker">FEEDBACK RECORD / 反馈记录公式</p><h2>把一句意见，<br>变成一条可追踪记录。</h2></div>
+        <p class="feedback-formula"><b>客户原话</b> → 反馈类型 → <b>追问与视觉转译</b> → 受影响模块 → 修改动作 → 成本/排期影响 → 负责人/截止时间 → <b>最终决策</b></p>
+        <p class="feedback-how"><b>记录在哪里？</b>使用项目唯一的《客户反馈与决策记录》集中保存，可用表格、多维表格或项目管理工具；文件放在项目归档的“客户反馈”文件夹，并在06视觉记忆中提炼为“客户反馈记忆”。聊天记录和口头意见只能作为来源，不能作为最终版本。</p>
+      </div>
+      <div class="feedback-example">
+        <div class="example-title"><span>EXAMPLE / 01</span><h3>客户原话：“画面还不够高级。”</h3></div>
+        <div><b>反馈类型</b><p>审美偏好；目前不是可直接执行的指令。</p></div>
+        <div><b>追问与视觉转译</b><p>品牌方指出：背景物件偏多、正面光太平均匀。转译为“降低置景信息量，提高侧光明暗层次”。</p></div>
+        <div><b>受影响模块</b><p>置景、构图、光线；不改变人物和产品。</p></div>
+        <div><b>修改动作</b><p>移除两件道具；概念图V02改为侧光版本V03。</p></div>
+        <div><b>影响与责任</b><p>无新增预算；美术指导＋摄影，周三18:00前完成。</p></div>
+        <div><b>最终决策</b><p>品牌决策人确认V03作为后续深化依据；记录日期与签核人。</p></div>
+      </div>
+      <div class="direction-conclusion"><b>本阶段输出 / 已签核的唯一版本</b><span>每轮客户意见都被转换为《客户反馈与决策记录》，并与对应提案版本、修改责任和签核结果关联。拍摄前以已签核版本作为唯一执行依据；项目完成后，把有复用价值的品牌偏好、否决原因和修改经验提炼进 06「视觉记忆」。</span></div>
+    </section>
+
+    <section class="panel" id="memory" data-title="视觉记忆">
+      <div class="chapter-head"><span>06</span><div><p>MEMORY, NOT A DUMP</p><h1>把每次项目，<br>变成可复用的视觉资产</h1></div><aside class="sticky pink">图库存“看过什么”，<br>记忆库存“为什么有效”。</aside></div>
+      <div class="memory-model">
+        <div class="memory-model-head"><p class="kicker">COMPLETE MEMORY STRUCTURE / 完整视觉记忆结构</p><h2>定稿文件，<br>归入六类资产。</h2><p>工作过程文件保存在项目工作区；每个阶段确认后的定稿文件，直接归入对应类别。客户反馈记录、定稿PPT、Prompt和执行文件本身就是视觉记忆，不需要再改写成另一份内容。</p></div>
+        <div class="memory-flow">
+          <div class="archive-node"><span>A / 项目工作区</span><b>过程文件＋阶段定稿文件</b><small>工作过程可追溯</small></div><i>→ 定稿时直接归位 →</i>
+          <div class="library-node"><span>B / 视觉记忆目录</span><b>六类已确认资产</b><small>不再生成第二份总结</small></div><i>→ 文件检索 / AI读取 →</i>
+          <div class="next-node"><span>C / 下一个 Brief</span><b>调用相关品牌规则、案例与成功经验</b><small>不是照搬上一案</small></div>
+        </div>
+      </div>
+      <div class="six-assets dark-grid">
+        <div class="six-assets-head"><p class="kicker">THE 6 MEMORY ASSETS</p><h2>视觉记忆库必须包含的六类资产</h2></div>
+        <article><span>01</span><h3>品牌记忆</h3><p>品牌定位、VI、目标人群、审美偏好、常用表达、必须保留与明确禁区。</p><b>来自</b><small>Brief诊断、品牌手册、历次确认反馈</small></article>
+        <article><span>02</span><h3>创意记忆</h3><p>提过的方向、正式概念、主题文案、故事结构、被选与被否决的原因。</p><b>来自</b><small>方向卡、方向选择记录、定稿PPT</small></article>
+        <article><span>03</span><h3>视觉素材记忆</h3><p>有复用价值的参考图、视频、场地、模特、造型、置景、光线和构图案例。</p><b>来自</b><small>视觉研究、参考板、勘景和概念预演</small></article>
+        <article><span>04</span><h3>Prompt 记忆</h3><p>具体任务使用的Prompt、模型、参数、输入图、成功结果、失败原因和适用条件。</p><b>来自</b><small>AI视觉预演、分镜、文案与PPT生成过程</small></article>
+        <article><span>05</span><h3>客户反馈记忆</h3><p>客户选择、否决、修改、签核及其原因；区分个人偏好与稳定的品牌规则。</p><b>来自</b><small>《客户反馈与决策记录》</small></article>
+        <article><span>06</span><h3>执行记忆</h3><p>预算级别、实际场地、模特、团队、器材、排期、现场问题、成片结果与复盘经验。</p><b>来自</b><small>制片文件、Shot List、现场记录、交付与复盘</small></article>
+      </div>
+      <div class="memory-carrier-simple">
+        <div class="carrier-simple-head"><p class="kicker">WHERE TO SAVE / 存放在哪里</p><h2>项目文件怎么存？<br>一张目录图就够。</h2><p>在现有硬盘、NAS或团队云盘中，为每次拍摄建立一个项目文件夹。项目名称只需让团队一眼认出品牌与拍摄内容，例如“某品牌｜2026夏季生活方式片”，不要求使用英文或固定符号。</p></div>
+        <div class="folder-tree dark-grid">
+          <article class="project-folder">
+            <span>项目文件夹示例</span>
+            <h3>某品牌<br>2026夏季生活方式片</h3>
+            <p>这是一次具体拍摄的总文件夹，里面只分为“工作过程”和“视觉记忆（定稿）”两部分。</p>
+          </article>
+          <div class="tree-split" aria-hidden="true"><i></i><b>分为</b><i></i></div>
+          <div class="folder-contents">
+            <article class="working-folder">
+              <header><span>01</span><div><small>未确认内容</small><h3>工作过程</h3></div></header>
+              <ul><li>原始 Brief 与产品资料</li><li>草稿 PPT 与未确认方案</li><li>AI 测试图与生成过程</li><li>沟通附件和临时文件</li></ul>
+              <p>允许保留多个版本，用于继续修改；尚不能作为下一次项目直接引用的定稿依据。</p>
+            </article>
+            <article class="memory-folder">
+              <header><span>02</span><div><small>已确认内容</small><h3>视觉记忆（定稿）</h3></div></header>
+              <ul><li><b>品牌：</b>品牌手册、已确认视觉规则</li><li><b>创意：</b>方向提案、方向选择记录、定稿方案</li><li><b>视觉素材：</b>采用的参考板、场地与造型资料</li><li><b>Prompt：</b>实际使用的指令、模型参数与结果</li><li><b>客户反馈：</b>完整反馈与决策记录</li><li><b>执行：</b>Shot List、制片文件、现场记录、成片与复盘</li></ul>
+              <p>只有已确认或已交付的版本放在这里，作为后续项目可检索、可复用的历史依据。</p>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="memory-save-process">
+        <div><p class="kicker">SAVE ONCE / 实际整理流程</p><h2>定稿即归档，<br>结项只检查缺漏。</h2></div>
+        <div class="save-steps three"><article><span>01 / 项目进行中</span><h3>过程稿放在“工作过程”</h3><p><b>策划 / 制片：</b>按项目既有习惯保存工作文件，不需要额外填写表格。</p></article><i>→</i><article><span>02 / 内容确认后</span><h3>定稿文件归入对应类别</h3><p><b>策划 / 制片：</b>文件名写清“项目＋内容＋版本＋定稿状态”；完整客户反馈记录直接归入05。</p></article><i>→</i><article><span>03 / 项目结束时</span><h3>检查定稿、版权和文件完整性</h3><p><b>策划 / 制片：</b>确认上方六类所需文件没有缺失、最终版本明确、参考素材版权状态已记录，即完成归档。</p></article></div>
+      </div>
+      <div class="memory-use"><b>下一次怎样调用</b><span>收到新Brief后，先按品牌或相似项目读取这六个目录：品牌规则来自01，历史创意来自02，画面参考来自03，生成方法来自04，客户决策依据来自05，真实执行经验来自06。AI负责搜索和摘要已有文件，策划负责判断本次是否适用。</span></div>
+      <div class="direction-conclusion"><b>本阶段输出 / 可直接复用的项目资产</b><span>完成归档后，品牌规则、定稿创意、视觉参考、实际Prompt、客户决策和执行经验各有明确位置。下一次收到Brief时，策划可以快速找到历史依据，AI也可以在获得授权后读取相关文件，辅助检索与总结。</span></div>
+    </section>
+
+    <section class="panel" id="kit" data-title="Prompt 与工具">
+      <div class="chapter-head kit-title"><span>07</span><div><p>REUSABLE OPERATING KIT</p><h1>Prompt搭建结构，<br>判断属于策划。</h1></div><aside class="sticky">先给上下文、任务和约束，<br>最后才规定输出格式。</aside></div>
+      <div class="prompt-package">
+        <div class="prompt-package-head"><p class="kicker">THE 10 CORE PROMPTS / 核心 Prompt 包</p><h2>十个核心Prompt，<br>贯穿视觉策划。</h2><p>只保留能够独立产生工作成果的任务。“客户补问”已包含在Brief诊断中；三个方向的比较已包含在三方向创意中；场景、模特、妆发、光线和构图统一由方向深化与概念图Prompt控制。</p></div>
+        <ol class="core-prompts"><li><b>P01</b><span>Brief诊断</span><small>项目视觉创意输入表＋必要确认问题</small></li><li><b>P02</b><span>三方向创意</span><small>三张方向卡＋并列评审记录</small></li><li><b>P03</b><span>方向深化</span><small>选定方向的八层完整视觉方案</small></li><li><b>P04</b><span>视觉检索与参考图分析</span><small>搜索词矩阵＋参考图用途说明</small></li><li><b>P05</b><span>概念图Prompt编译</span><small>场景、人物、造型、产品、光线与构图指令</small></li><li><b>P06</b><span>平面 Shot List</span><small>逐张最终画面任务</small></li><li><b>P07</b><span>视频分镜</span><small>故事顺序＋逐镜头执行表</small></li><li><b>P08</b><span>客户反馈记录</span><small>反馈转译、修改动作与签核</small></li><li><b>P09</b><span>PPT内容编排</span><small>三种不同用途的提案结构</small></li><li><b>P10</b><span>项目归档检查</span><small>六类视觉记忆文件完整性</small></li></ol>
+        <div class="shared-context"><b>所有Prompt必须读取同一份已确认上下文</b><span>Brand Memory / 品牌记忆</span><span>Project Brief / 项目Brief</span><span>Approved Direction / 已选方向</span><span>Locked Visual Rules / 已锁定视觉规则</span><span>Client Decision Log / 客户决策记录</span><p>未形成的上下文写“暂无”，不能由AI补造；上游内容一旦签核，下游Prompt只在其边界内工作。</p></div>
+      </div>
+      <div class="deck-system">
+        <div class="deck-system-head"><p class="kicker">THREE DECKS, THREE DECISIONS / PPT应分成三种</p><h2>不要把所有内容，<br>塞进一份无限加长的方案。</h2></div>
+        <div class="deck-types">
+          <article><span>01 / 8–12页</span><h3>创意方向提案</h3><b>用途：让品牌方选方向</b><ol><li>Brief理解</li><li>核心洞察</li><li>方向A＋方向A视觉</li><li>方向B＋方向B视觉</li><li>方向C＋方向C视觉</li><li>三方向对比</li><li>推荐方向</li></ol><small>本轮只决定“走哪条路”，不提前陷入执行细节。</small></article>
+          <article><span>02 / 20–30页</span><h3>完整创意方案</h3><b>用途：方向确认后完成视觉定案</b><ol><li>封面、Brief回应、核心概念</li><li>主题叙述与故事线</li><li>视觉关键词与总情绪板</li><li>摄影语言</li><li>场景、场地与置景道具</li><li>人物、选角、动作</li><li>服装搭配与妆发造型</li><li>光线色调与平面构图</li><li>视频参考、分镜与平视频协同</li><li>交付需求与下一步</li></ol><small>本轮决定“它最终应该长什么样”。</small></article>
+          <article><span>03 / 按项目复杂度</span><h3>拍摄执行 / PPM方案</h3><b>用途：让摄影、导演、制片和品牌方共同签核执行</b><ol><li>定稿视觉规则与禁区</li><li>场地、置景与道具清单</li><li>模特、Look、妆发与造型</li><li>平面 Shot List</li><li>视频分镜＋镜头表</li><li>布光、器材与技术测试</li><li>拍摄顺序、排期与人员</li><li>预算边界、版权与风险备选</li><li>最终签核项</li></ol><small>本轮决定“现场具体怎么拍、谁负责、出现变化怎么办”。</small></article>
+        </div>
+      </div>
+      <div class="prompt-tabs" role="tablist">
+        <button class="active" data-prompt="diagnose">P01 Brief诊断</button><button data-prompt="concept">P02 三方向创意</button><button data-prompt="deepen">P03 方向深化</button><button data-prompt="search">P04 检索与参考分析</button><button data-prompt="image">P05 概念图Prompt</button><button data-prompt="shot">P06 平面Shot List</button><button data-prompt="video">P07 视频分镜</button><button data-prompt="feedbacklog">P08 反馈记录</button><button data-prompt="deck">P09 PPT编排</button><button data-prompt="memorylog">P10 归档检查</button>
+      </div>
+      <div class="prompt-stage">
+        <article class="prompt active" id="prompt-diagnose"><button class="copy">复制</button><pre>你是商业摄影视觉策划助理。现在只解读 Brief，不提出创意方向，不补写品牌方没有提供的事实。
+
+我会上传：[品牌介绍 / 本次项目 Brief / 产品样衣或平铺图 / 拍摄需求 / 视觉参考 / 已知制作条件]。资料可能不完整。
+
+请先逐项读取资料，再输出《项目视觉创意输入表》，包含：
+1. 项目背景；
+2. 本次传播目标；
+3. 目标人群；
+4. 品牌定位与语气；
+5. 拍摄产品与系列风格；
+6. 产品信息与表达重点；
+7. 拍摄内容与交付范围；
+8. 使用渠道与观看方式；
+9. 视觉参考解读；
+10. 必须保留与明确避免；
+11. 已知制作条件；
+12. 创意开始前需补充确认的信息。
+
+每个栏目用五列呈现：①Brief 原文或客观信息；②AI 视觉转译；③信息来源（文件名 / 页码 / 图片编号）；④状态；⑤对后续创意的影响。
+
+状态必须严格区分：
+- “已明确”：品牌资料已经直接给出答案；
+- “待策划复核”：资料有原话，AI 已将其翻译为摄影或视觉语言，但需要策划判断翻译是否合理；
+- “需品牌确认”：AI 的视觉转译仍存在歧义，或不同理解会改变创意方向，需要向品牌方确认；
+- “信息缺失”：原始资料没有答案。
+
+第12项不是笼统收集所有缺失资料。它只汇总“原始 Brief 没有说明、且不同答案会直接改变创意方向”的信息，并将其改写成可以向品牌方直接提问的问题，注明确认对象、优先级、结果和日期。
+
+特别要求：
+- 产品部分只根据已上传的样衣、平铺图、商品图和系列说明，归纳款式与整体风格；不要索要初期并不需要的色号、尺码等信息。
+- 参考图要分别解释品牌方可能在参考场景、人物、构图、光线、色调、情绪还是叙事；先标“待策划复核”，确有歧义时再标“需品牌确认”。
+- 最后只提出会改变创意方向的必要问题，并按优先级排列。
+- 所有没有资料依据的内容必须写“未提供 / 待确认”，不可自行编造。</pre></article>
+        <article class="prompt" id="prompt-concept"><button class="copy">复制</button><pre>基于品牌方已经确认的《项目视觉创意输入表》，提出三个真正不同的创意方向：
+A 品牌延续：延续品牌已有的视觉与表达方式；
+B 安全创新：保留品牌识别，同时增加一个清晰的新创意变量；
+C 突破表达：用新的故事或视觉语境重新理解产品。
+
+每个方向严格按照同一张“方向卡”输出：
+1. 方向名称——这个方向叫什么；
+2. 一句话概念——用一句话讲清谁、在什么情境、通过产品发生什么；
+3. Brief 回应——它具体解决品牌的什么问题；
+4. 产品角色——产品在故事中扮演什么、重点呈现什么；
+5. 目标情绪——希望消费者产生什么感受；
+6. 主题叙述——世界观、人物处境和基本故事；
+7. 视觉关键词——3–6 个可指导找图和生图的词，并逐一解释；
+8. 摄影语言——纪实、棚拍、时尚、电影感、静物等总体观看方式；
+9. 场景预设——故事大概发生在哪里，此时不锁定具体场地；
+10. 人物与造型——什么样的人、什么状态和服装；
+11. 色彩与光线——主要色调、光质与时间感；
+12. 可行性与风险——为什么能拍、最大的创意落地风险和替代思路。
+
+不要替团队评分或高亮推荐。最后制作一张专业评审记录表，按以下六个维度并列三个方向：
+1. 品牌调性一致性——是否符合品牌定位、语气与既有视觉资产；
+2. 产品卖点呈现完整性——主推款、设计特点与使用状态是否进入故事和关键画面；
+3. 创意概念差异化——是否区别于品牌过往项目及同类竞品；
+4. 目标客群沟通准确性——人物、场景和情绪是否符合目标客群并传递预期感受；
+5. 摄影视觉系统完整性——场景、选角、造型、构图、光线与色调是否统一，并支持平面、视频和多画幅；
+6. 制作执行可行性——场地、演员、置景、器材、预算与排期是否支持落地，风险是否有替代方案。
+每个维度只保留各岗位的具体意见、判断依据和需要调整的内容；最终选择由品牌方决策人完成。
+
+结尾输出《方向选择记录》：选定方向、选择原因、必须保留的内容、需要调整的内容，以及进入方案深化后首先要解决的问题。
+禁止：只替换颜色、地点或模特来伪装成不同方向；不要让产品与故事无关。</pre></article>
+        <article class="prompt" id="prompt-deepen"><button class="copy">复制</button><pre>基于已经签核的《方向选择记录》，把选定方向深化为可用于完整创意方案的八层视觉系统。不得重新提出新方向，不得改变已锁定的概念、产品角色和品牌边界；缺失信息标“待策划确认”。
+
+输入资料：[项目视觉创意输入表 / 选定方向卡 / 方向选择记录 / 产品图 / 已确认参考 / 制作条件]。
+
+按以下八层输出，每层必须分别写明“需要确定 / AI可以辅助 / 本层交付物 / 与上一层的关系”：
+1. 概念深化：正式主题名、核心文案、主题叙述、产品卖点与概念关系、人物为何出现、故事开始/发展/转折/结束、平面与视频如何共享概念；
+2. 视觉系统：视觉关键词、图片质感、摄影媒介、构图规律、景别规律、色彩比例、光线方向、画面动静关系、产品视觉权重；
+3. 场景与场地：故事需要的场景、棚拍或实景、场景转换、每个场景的产品任务、真实场地必须具备的空间/采光/机位条件；
+4. 人物、选角与动作：模特画像、年龄感与气质、人物关系、表演状态、每个场景的动作逻辑、产品如何在动作中被看见；
+5. 服装搭配与妆发造型：Look分配、层次比例、配饰、妆面、发型、造型连续性，以及主推产品不可被遮挡的规则；
+6. 置景与道具：空间结构、置景清单、道具功能、材质与颜色关系、真实可获得性、需要避免的无意义装饰；
+7. 光线与色调：时间感、主光方向、软硬与反差、色温、肤色和产品颜色保护、不同场景之间的色彩连续性；
+8. 执行画面：平面必须获得的构图类型、视频关键故事节点、平视频共用场景与动作、横竖画幅和文案留白。
+
+最后输出三项：
+A. 八层之间是否存在矛盾；
+B. 进入找图和AI视觉预演前仍需策划确认的问题；
+C. 可直接作为完整创意方案PPT目录的页面结构。
+
+所有判断必须能追溯到已确认的Brief或选定方向；不要用“高级、氛围感、电影感”等词代替具体视觉说明。</pre></article>
+        <article class="prompt" id="prompt-search"><button class="copy">复制</button><pre>基于已签核的方向卡和八层视觉方案，为[指定模块：整体调性 / 摄影语言 / 场景场地 / 人物动作 / 服装妆发 / 置景道具 / 光线色调 / 平面构图 / 视频镜头]建立《视觉检索与参考图分析表》。
+
+第一部分｜检索词
+1. 输出中文和英文核心搜索词；
+2. 按“主体＋状态/动作＋场景＋光线＋摄影语言＋媒介/年代”组合可直接复制的长尾搜索式；
+3. 分别适配Pinterest、Instagram、Vogue Runway/Editorial、ShotDeck/FilmGrab、场地与模特平台；
+4. 给出同义词、反向词和需要避开的陈词滥调；
+5. 每组词注明要寻找的具体画面，以及对应八层方案中的哪一层。
+
+第二部分｜参考图分析
+我上传参考图后，请逐张记录：参考图ID、来源链接/作者、版权或使用状态、画面客观描述，以及它只用于参考什么。
+分析维度限定为：场景空间、人物与动作、服装妆发、置景道具、构图景别、摄影媒介、光线、色调、叙事节奏、产品权重。
+
+每张图必须明确：
+- 可借鉴：与本项目已确认方向一致的具体元素；
+- 不借鉴：与品牌、产品或制作条件冲突的元素；
+- 放入方案的位置：总情绪板或某一具体模块；
+- 是否仍需真实场地、服装、道具或版权核实。
+
+不要只给网站名单，不要因为画面“好看”就收入情绪板，不要把参考图描述成待复制的成片。</pre></article>
+        <article class="prompt" id="prompt-image"><button class="copy">复制</button><pre>把已确认的方向卡、八层视觉方案、产品图和参考图，编译成可用于[填写模型名称]的商业时尚摄影概念图Prompt。不得改变产品款式、结构、颜色、材质和标识；不得加入未确认的故事或品牌元素。
+
+先输出一份中文“画面控制单”，再输出适配目标模型的正式Prompt。控制单必须包含：
+1. 画面目的：本图用于确认整体调性、场景、人物状态、造型、光线、构图或产品表现中的哪一项；
+2. 主体与产品：人物画像、产品位置、产品必须看清的设计点；
+3. 故事时刻：画面中正在发生的具体动作，而不是静态摆姿描述；
+4. 场景：空间、时间、天气、前中后景和必要道具；
+5. 服装妆发：Look、轮廓、层次、材质、妆面和发型；
+6. 摄影语言：媒介质感、景别、机位、焦段感、构图、景深和动态关系；
+7. 光线色彩：主光方向、软硬、反差、色温、主辅色、肤色和产品颜色保护；
+8. 画幅与交付：横竖比例、文案留白和裁切安全；
+9. 排除项：产品变形、错误Logo、多余肢体、塑料皮肤、无意义道具、文字水印及与已确认方案冲突的内容。
+
+生成一组而不是互相无关的图片：同一人物、产品、场景、造型和光线规则下的大全景、中景、近景与产品特写。明确标注哪些内容由输入图锁定、哪些变量允许模型变化。最后列出需要人工检查的产品准确性、人物一致性和场景可拍性。</pre></article>
+        <article class="prompt" id="prompt-shot"><button class="copy">复制</button><pre>根据已确认的Brief、产品清单、交付渠道、八层视觉方案和参考图，整理《平面 Shot List》。这里只规划最终必须获得的平面画面，不写视频镜头，也不把摄影师实际按快门的次数当成Shot数量。
+
+编号规则：平面使用P01、P02……；同一构图的横竖版本使用P03-H / P03-V。ID必须在提案、现场核对、选片、修改意见和交付文件中保持一致。
+
+每行包含：
+1. ID；
+2. 交付用途与画幅；
+3. 产品 / Look及必须看清的设计点；
+4. 场景、人物关系与具体动作；
+5. 景别、机位、焦段感与构图；
+6. 摄影媒介、光线与色彩说明；
+7. 文案留白与裁切安全；
+8. 优先级（Must-have / Nice-to-have）；
+9. 参考图ID及只参考哪一点；
+10. 现场风险与完成状态。
+
+排序时先覆盖品牌方要求的主推产品、Look、Banner、Lookbook、电商或社交媒体交付，再增加丰富故事的补充画面。最后检查：产品是否全部覆盖；同一布光能否连续完成；横竖画幅是否成立；是否存在重复画面；是否加入了已确认方案之外的新内容。</pre></article>
+        <article class="prompt" id="prompt-video"><button class="copy">复制</button><pre>根据已确认的Brief、故事线、产品任务、八层视觉方案、时长和发布渠道，分别输出《视频故事分镜》和《视频镜头表》。分镜回答“故事按什么顺序发生”，镜头表回答“每个镜头怎样拍”。
+
+先写故事结构：开场建立、发展、转折/变化、产品关键时刻、结束画面；说明每一段的叙事功能、产品任务和预计时长。
+
+再建立逐镜头表，视频ID使用V01、V02……，每行包含：
+1. ID与时间码；
+2. 场景与产品；
+3. 人物动作、表演状态和视线；
+4. 景别、机位与焦段感；
+5. 镜头运动及运动理由；
+6. 单镜时长、帧率和是否需要升降格；
+7. 环境声、衣料声、音乐、台词或字幕；
+8. 与前后镜头的动作、视线、方向和造型连续性；
+9. 转场方式；
+10. 优先级、现场风险和替代镜头。
+
+最后检查：总时长是否正确；故事是否完整；每个场景承担的产品任务是否清楚；关键产品是否有足够停留时间；平面拍摄可共用哪些场景、动作和光线；竖屏与横屏是否都能安全裁切；镜面、天气、稳定器、声音和连续性风险是否有备选。</pre></article>
+        <article class="prompt" id="prompt-feedbacklog"><button class="copy">复制</button><pre>把本轮客户反馈整理为《客户反馈与决策记录》。不得改写或省略客户原话，也不要直接把模糊评价当成修改指令。
+
+每条记录包含：反馈ID、对应提案版本/页面或画面ID、客户原话、反馈来源与日期、反馈类型、需要追问的问题、视觉转译、受影响模块、确认后的修改动作、预算/排期影响、负责人、截止时间、新版本号、最终决策、签核人和签核日期。
+
+反馈类型区分：
+1. 事实纠正；2. 品牌规则；3. 审美偏好；4. 商业/渠道要求；5. 制作风险；6. 相互冲突的意见。
+
+对于“不够高级、太普通、不够年轻”等抽象反馈：先列出可能对应的场景、人物、造型、构图、光线、色调或节奏变量，再生成最少量的澄清问题。没有得到确认前，不擅自决定修改方式。
+
+最后输出：本轮已确认修改项、仍待确认项、被否决项及原因、下一版本负责人和签核状态。所有记录写入项目唯一的《客户反馈与决策记录》，不要分散保存在聊天记录中。</pre></article>
+        <article class="prompt" id="prompt-memorylog"><button class="copy">复制</button><pre>请根据我提供的项目文件清单，检查六类视觉记忆目录是否完整。只检查现有文件，不重新总结项目，不改写客户反馈，也不要求策划逐张图片登记。
+
+六类目录及应保存内容：
+1. 品牌记忆：品牌手册、品牌定位、已确认视觉规则与禁区；
+2. 创意记忆：方向提案、方向选择记录、完整定稿创意方案；
+3. 视觉素材记忆：最终采用的参考板、场地、选角、造型、置景、光线和构图资料；
+4. Prompt记忆：项目中实际使用的Prompt、模型参数、输入图和对应生成结果；
+5. 客户反馈记忆：完整《客户反馈与决策记录》及最终签核，不进行二次提炼；
+6. 执行记忆：平面Shot List、视频分镜/镜头表、制片文件、现场记录、成片和项目复盘。
+
+检查规则：
+- 只检查文件是否存在、版本是否为最终确认版、命名是否清楚、链接是否有效、版权或保密状态是否已记录；
+- 过程稿保留在“工作过程”目录，不要求移入六类定稿目录；
+- 同一文件只保存一次，可以通过链接或快捷方式被其他目录引用；
+- AI可以辅助识别文件类型、检查命名和生成图片检索标签，但不得生成新的品牌结论或客户偏好。
+
+只输出：①已齐全目录；②缺少或版本不明的文件；③建议归位但不得自动移动的文件；④需要人工确认的版权或链接问题。</pre></article>
+        <article class="prompt" id="prompt-deck"><button class="copy">复制</button><pre>把已批准内容编排为PPT，不新增未经确认的创意事实。先让我选择本轮需要的PPT类型，再只生成对应内容，不把三种PPT混成一份：
+
+A《创意方向提案》8–12页，用于选方向：Brief理解、核心洞察、方向A及视觉、方向B及视觉、方向C及视觉、三方向对比、推荐方向。
+
+B《完整创意方案》20–30页，方向确认后制作：封面、Brief回应、核心概念、主题叙述、故事线、视觉关键词、总情绪板、摄影语言、场景、场地、置景道具、人物选角与动作、服装搭配、妆发造型、光线色调、平面构图、视频参考与分镜、平视频协同、交付需求、下一步。
+
+C《拍摄执行 / PPM方案》，按项目复杂度：已锁定视觉规则、场地与置景、模特与Look、平面Shot List、视频分镜＋镜头表、布光与器材、拍摄顺序与排期、团队职责、预算边界、版权、风险备选和最终签核项。
+
+生成前读取：Brand Memory、Project Brief、Approved Direction、Locked Visual Rules、Client Decision Log；缺失内容标为“待确认”，不得补造。
+
+每页只表达一个结论；标题必须是观点而非栏目名；每张参考图附“只参考哪一点”；AI图显著标注Concept Visual；统一12栏网格、页码、版本号与日期；不拉伸图片，不把长段落塞进页面。</pre></article>
+      </div>
+
+      <div class="tool-map">
+        <div class="tool-map-head"><p class="kicker">EAGLE-INFORMED TOOL MAP / 基于你的收藏归类</p><h2>不是工具大全，<br>而是任务分工。</h2><p>已读取 Eagle 库中的 429 条记录与 400 个网页 URL，并结合你明确常用的 ChatGPT、Google AI、DeepSeek、豆包、即梦、LiblibAI、Codex、Trae 与 WorkBuddy 重新归类。下面只保留与商业摄影视觉策划直接相关的工具；同类平台不需要全部订阅。</p></div>
+        <div class="tool-categories">
+          <article><span>01 / 理解与创意</span><h3>Brief、方向与文字结构</h3><p>读取品牌资料和产品图，完成 Brief 诊断、三方向创意、方案深化、Prompt 与提案文案。</p><div class="tool-links"><a href="https://chatgpt.com" target="_blank">ChatGPT</a><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a><a href="https://chat.deepseek.com" target="_blank">DeepSeek</a><a href="https://www.doubao.com" target="_blank">豆包</a></div><b>建议组合</b><small>ChatGPT 或 Gemini 选一个作为项目中枢；DeepSeek / 豆包用于中文复核，不并行重复生成整份方案。</small></article>
+          <article><span>02 / 视觉研究</span><h3>真实参考、趋势与影像语言</h3><p>寻找能够证明场景、摄影语言、造型、光线和行业语境的真实案例；Eagle 负责统一收藏。</p><div class="tool-links"><a href="https://www.pinterest.com" target="_blank">Pinterest</a><a href="https://www.cosmos.so" target="_blank">Cosmos</a><a href="https://sickymag.com" target="_blank">SICKY</a><a href="https://www.vogue.com" target="_blank">Vogue</a><a href="https://www.instagram.com" target="_blank">Instagram</a><a href="https://www.xinpianchang.com" target="_blank">新片场</a><a href="https://film-grab.com" target="_blank">FilmGrab</a><a href="https://kive.ai" target="_blank">Kive</a></div><b>建议组合</b><small>AI只生成检索词和分析参考用途；真实素材仍由策划检索、筛选并核对来源。</small></article>
+          <article><span>03 / 图像预演</span><h3>场景、人物、造型与产品融合</h3><p>在方向确认前生成概念图；确认后补齐同一场景的角度、景别、人物动作和光线测试。</p><div class="tool-links"><a href="https://jimeng.jianying.com" target="_blank">即梦</a><a href="https://www.liblib.art" target="_blank">LiblibAI</a><a href="https://klingai.com" target="_blank">可灵</a><a href="https://aigc.xinpianchang.com" target="_blank">Shotlab</a><a href="https://www.flowpix.club" target="_blank">FlowPix</a><a href="https://www.xingliu.art" target="_blank">星流</a><a href="https://youart.ai" target="_blank">YouArt</a><a href="https://artflo.ai" target="_blank">Artflo</a></div><b>建议组合</b><small>即梦或 LiblibAI 选一个主力；只有现有模型无法满足产品一致性或局部控制时，才切换到另一平台。</small></article>
+          <article><span>04 / 视频预演</span><h3>镜头运动、转场与 Animatic</h3><p>把已确认的关键分镜做成低成本动态测试，判断人物运动、镜头运动、材质表现和镜头衔接是否成立。</p><div class="tool-links"><a href="https://klingai.com" target="_blank">可灵</a><a href="https://runwayml.com" target="_blank">Runway</a><a href="https://aigc.xinpianchang.com" target="_blank">Shotlab</a><a href="https://www.liblib.tv" target="_blank">LibTV</a><a href="https://openai.com/sora" target="_blank">Sora</a><a href="https://lumalabs.ai/dream-machine" target="_blank">Luma</a><a href="https://pika.art" target="_blank">Pika</a></div><b>建议组合</b><small>优先使用可灵 / Runway / Shotlab / LibTV 中的一个；每个方向只测试3–5个决定性镜头，不在提案期生成完整成片。</small></article>
+          <article><span>05 / 参考板与协作</span><h3>收藏、Moodboard 与版本沟通</h3><p>统一管理参考图、URL、客户版本、场景和造型板；避免图片散落在聊天和临时下载文件夹。</p><div class="tool-links"><a href="https://eagle.cool" target="_blank">Eagle</a><a href="https://milanote.com" target="_blank">Milanote</a><a href="https://www.figma.com" target="_blank">Figma</a><a href="https://pixso.cn" target="_blank">Pixso</a><a href="https://www.feishu.cn" target="_blank">飞书</a><a href="https://www.notion.com/zh-cn" target="_blank">Notion</a></div><b>建议组合</b><small>Eagle保存视觉素材；飞书 / Notion 保存文字与决策；Milanote、Figma 或 Pixso 只选一个制作共享参考板。</small></article>
+          <article><span>06 / 修图与交付测试</span><h3>抠图、放大、肤质与清晰度</h3><p>用于概念图整理、局部修复和提案展示；不能把AI修出的错误产品细节当成实拍标准。</p><div class="tool-links"><a href="https://www.evoto.ai" target="_blank">Evoto</a><a href="https://www.magnific.com/app" target="_blank">Magnific</a><a href="https://bigjpg.com" target="_blank">Bigjpg</a><a href="https://zh.bgsub.com" target="_blank">BgSub</a><a href="https://www.topazlabs.com" target="_blank">Topaz</a><a href="https://retouch4me.com" target="_blank">Retouch4me</a></div><b>建议组合</b><small>提案阶段优先用现有免费或按次功能；Evoto、Topaz、Retouch4me 等只在真实后期需求出现时购买。</small></article>
+          <article><span>07 / 编排与自动化</span><h3>HTML、PPT、表格与文件结构</h3><p>把确定的内容自动编排成网页、PPT骨架、Shot List、反馈表和项目归档结构。</p><div class="tool-links"><a href="https://chatgpt.com/codex" target="_blank">Codex</a><a href="https://www.canva.com" target="_blank">Canva</a><a href="https://www.figma.com" target="_blank">Figma</a><a href="https://pixso.cn" target="_blank">Pixso</a><a href="https://www.feishu.cn" target="_blank">飞书</a><span>Trae</span><span>WorkBuddy</span></div><b>建议组合</b><small>Codex / Trae / WorkBuddy 承担结构与自动化；Canva、Figma、Pixso只负责最终视觉编排，不重新决定创意。</small></article>
+          <article><span>08 / 按需扩展</span><h3>声音、3D与数字人</h3><p>只有视频提案明确需要旁白、音乐、虚拟场景或数字人物时才启用，不属于每个摄影项目的必经节点。</p><div class="tool-links"><a href="https://elevenlabs.io" target="_blank">ElevenLabs</a><a href="https://suno.com" target="_blank">Suno</a><a href="https://www.udio.com" target="_blank">Udio</a><a href="https://www.meshy.ai" target="_blank">Meshy</a><a href="https://www.tripo3d.ai" target="_blank">Tripo3D</a><a href="https://www.heygen.com" target="_blank">HeyGen</a></div><b>建议组合</b><small>按项目启用，不纳入固定月度订阅；真人声音、形象与换脸必须先取得授权。</small></article>
+        </div>
+      </div>
+      <div class="video-platform-guide dark-grid">
+        <div class="video-guide-head"><p class="kicker">VIDEO PRE-VIS / 视频预演平台怎么选</p><h2>先看镜头任务，<br>再选生成平台。</h2><p>“视频预演”不是一个抽象工具位。以下平台都来自你的 Eagle 收藏清单；“已收藏”表示库内已经保存了对应入口，“库内候选”表示清单中存在但尚未作为常用收藏。</p></div>
+        <div class="video-guide-list"><article><span>已收藏</span><h3>可灵 AI</h3><p>适合从概念图测试人物运动、产品状态、首尾帧衔接和商业镜头感。</p><b>图生视频、关键动作、镜头运动</b></article><article><span>已收藏</span><h3>Runway</h3><p>适合镜头运动、画面延展、转场和合成思路测试，可作为国际平台备选。</p><b>摄影机运动、转场、局部控制</b></article><article><span>已收藏</span><h3>Shotlab</h3><p>新片场体系内的中文创作入口，适合快速制作广告或时尚短片的镜头概念。</p><b>中文工作流、广告镜头草案</b></article><article><span>已收藏</span><h3>LibTV</h3><p>适合已在 LiblibAI 中管理模型、参考图或生成资产的项目，减少素材搬运。</p><b>Liblib生态、图像资产延续</b></article><article><span>库内候选</span><h3>Sora</h3><p>用于叙事连续性和复杂场景运动的探索；是否采用取决于账号可用性和当期能力。</p><b>连续动作、叙事段落测试</b></article><article><span>库内候选</span><h3>Luma Dream Machine</h3><p>可用于空间运动、材质动态和氛围镜头实验，适合作为特定镜头的补充方案。</p><b>空间运动、材质与环境动态</b></article><article><span>库内候选</span><h3>Pika</h3><p>适合快速视觉效果、局部变化与短转场实验，不作为整套写实人物项目的默认主力。</p><b>短效果、转场、社交媒体镜头</b></article></div>
+      </div>
+      <div class="budget-route"><div><p class="kicker">≤ ¥150 / MONTH / 预算使用原则</p><h2>固定订阅一个，<br>其余按项目启用。</h2></div><ol><li><b>固定中枢</b><span>ChatGPT 或 Gemini 只选一个付费；若已占满月度预算，其他节点全部使用免费档或现有额度。</span></li><li><b>图像主力</b><span>即梦与 LiblibAI 按项目二选一，先用低成本预览，方向签核后才生成高分辨率画面。</span></li><li><b>视频额度</b><span>只在需要动态验证的项目购买可灵、Runway、Shotlab 或 LibTV 中一个平台的额度，不同时续费多个视频平台。</span></li><li><b>临时后期</b><span>放大、抠图、修图、声音和3D只在明确交付需要时按次启用。价格、免费额度和地区可用性以购买当天平台页面为准。</span></li></ol></div>
+      <div class="source-grid eagle-sources"><article><h3>时尚与摄影</h3><p>Vogue、Numéro、DAZED、SICKY、Instagram、新片场</p></article><article><h3>视觉搜索与收藏</h3><p>Pinterest、Cosmos、Kive、Eagle、Milanote、LiblibAI灵感区</p></article><article><h3>影视与构图</h3><p>FilmGrab、Screenmusings、影视工业网、豆瓣电影、时光网</p></article><article><h3>排版与网页</h3><p>SiteInspire、One Page Love、Lapa、Minimal Gallery、Dribbble</p></article><article><h3>色彩与素材</h3><p>Coolors、Color Hunt、Huemint、Coloraa、Unsplash、Pexels、视觉中国</p></article><article><h3>场地、人才与制片</h3><p>优先建立本地影棚、场地方、模特经纪、摄影与造型团队、道具租赁和器材供应商名单；通用灵感站不能替代真实档期与报价确认。</p></article></div>
+      <div class="safety"><b>SAFE USE</b><p>上传产品、模特、未发布 Campaign 或客户数据前，确认平台训练政策与保密条款；真人换脸 / 换装必须取得授权；AI 概念图需要标识；参考图不等于可复制；最终产品形态、色彩与功能必须以实物为准。</p></div>
+    </section>
+  </main>
+
+  <footer><span>VISUAL OPS / COMMERCIAL PHOTOGRAPHY PLAYBOOK</span><span>LOCAL-FIRST · NO TRACKING · NO EXTERNAL SCRIPTS</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite">已复制</div>
+  <script src="app.js"></script>
+</body>
+</html>
