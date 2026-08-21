@@ -5,6 +5,25 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}#particles{display:none}}
 @media print{.topbar,.tabs,#particles,.copy,.prompt-tabs,footer{display:none!important}.panel{display:block!important;break-after:page}.hero{min-height:auto}.chapter-head{min-height:auto}.dark-grid,.card.dark,.workflow-strip,.reference-protocol,.shot-schema,.metadata{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
 
+/* Keep long prompt instructions inside a readable, independently scrollable viewer. */
+.prompt pre{
+  height:clamp(420px,62vh,680px);
+  margin:0;
+  padding-right:84px;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-gutter:stable;
+}
+.prompt pre::-webkit-scrollbar{width:10px}
+.prompt pre::-webkit-scrollbar-track{background:#1b1c1b}
+.prompt pre::-webkit-scrollbar-thumb{background:#666;border:2px solid #1b1c1b}
+.prompt pre::-webkit-scrollbar-thumb:hover{background:var(--mint)}
+.copy{z-index:2}
+@media(max-width:600px){
+  .prompt-stage{padding:24px 18px 50px}
+  .prompt pre{height:clamp(360px,58vh,560px);padding:64px 20px 24px;font-size:12px;line-height:1.65}
+}
+
 /* Revised information architecture: Brief → direction card → layered development */
 .brief-sequence{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;padding:50px 5vw;background:var(--ink);color:var(--paper);align-items:center;gap:18px}.brief-sequence article{border:1px solid #555;padding:24px;min-height:185px}.brief-sequence article span{font:11px var(--mono);color:var(--mint)}.brief-sequence article b{display:block;font-size:21px;margin:35px 0 8px}.brief-sequence article p{color:#aaa;line-height:1.4;margin:0}.brief-sequence i{font-style:normal;color:var(--mint);font-size:22px}.note-line{border-left:5px solid var(--mint);padding:14px 16px;margin-top:28px;background:#ffffff0b;line-height:1.5}.brief-output>h2{font-size:clamp(34px,5vw,70px);letter-spacing:-.06em;max-width:900px;margin:25px 0}.brief-output .lead{max-width:900px;font-size:18px;line-height:1.55;margin-bottom:40px}.brief-fields div{min-height:205px}.brief-fields small{margin-top:26px;line-height:1.45}.brief-example{margin:0 5vw 70px;border:1px solid;display:grid;grid-template-columns:1.2fr repeat(4,1fr)}.brief-example>*{padding:18px;border-right:1px solid;line-height:1.4}.brief-example b{background:var(--pink)}
 .direction-table{margin:40px 5vw 80px;border-top:1px solid;border-left:1px solid}.direction-table>div{display:grid;grid-template-columns:1fr 1.3fr 2fr}.direction-table>div>*{padding:18px 22px;border-right:1px solid;border-bottom:1px solid;margin:0;line-height:1.45}.direction-table .dt-head{background:var(--ink);color:var(--mint);font:12px var(--mono)}.direction-table span{font-weight:700}.selection-block{padding:70px 5vw}.selection-block h3{font-size:clamp(38px,5vw,70px);letter-spacing:-.06em;margin:0 0 35px}.selection-block>div{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid;border-left:1px solid}.selection-block article{padding:30px;border-right:1px solid;border-bottom:1px solid;min-height:210px}.selection-block article b{font-size:22px}.selection-block article p{line-height:1.5}.selection-block>.note-line{background:var(--acid);border-left-color:var(--ink)}
