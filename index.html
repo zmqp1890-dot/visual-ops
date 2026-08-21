@@ -368,7 +368,7 @@
         </div>
       </div>
       <div class="prompt-tabs" role="tablist">
-        <button class="active" data-prompt="diagnose">P01 Brief诊断</button><button data-prompt="concept">P02 三方向创意</button><button data-prompt="deepen">P03 方向深化</button><button data-prompt="search">P04 检索与参考分析</button><button data-prompt="image">P05 概念图Prompt</button><button data-prompt="shot">P06 平面Shot List</button><button data-prompt="video">P07 视频分镜</button><button data-prompt="feedbacklog">P08 反馈记录</button><button data-prompt="deck">P09 PPT编排</button><button data-prompt="memorylog">P10 归档检查</button>
+        <button class="active" data-prompt="diagnose">P01 Brief诊断</button><button data-prompt="concept">P02 三方向创意</button><button data-prompt="search">P03 检索与参考分析</button><button data-prompt="deepen">P04 方向深化</button><button data-prompt="image">P05 概念图Prompt</button><button data-prompt="shot">P06 平面Shot List</button><button data-prompt="video">P07 视频分镜</button><button data-prompt="feedbacklog">P08 反馈记录</button><button data-prompt="deck">P09 PPT编排</button><button data-prompt="memorylog">P10 归档检查</button>
       </div>
       <div class="prompt-stage">
         <article class="prompt active" id="prompt-diagnose"><button class="copy">复制</button><pre>你是商业摄影视觉策划助理。
@@ -966,26 +966,128 @@ B. 进入找图和AI视觉预演前仍需策划确认的问题；
 C. 可直接作为完整创意方案PPT目录的页面结构。
 
 所有判断必须能追溯到已确认的Brief或选定方向；不要用“高级、氛围感、电影感”等词代替具体视觉说明。</pre></article>
-        <article class="prompt" id="prompt-search"><button class="copy">复制</button><pre>基于已签核的方向卡和八层视觉方案，为[指定模块：整体调性 / 摄影语言 / 场景场地 / 人物动作 / 服装妆发 / 置景道具 / 光线色调 / 平面构图 / 视频镜头]建立《视觉检索与参考图分析表》。
+        <article class="prompt" id="prompt-search"><button class="copy">复制</button><pre>你是商业时尚摄影视觉研究助理。
 
-第一部分｜检索词
-1. 输出中文和英文核心搜索词；
-2. 按“主体＋状态/动作＋场景＋光线＋摄影语言＋媒介/年代”组合可直接复制的长尾搜索式；
-3. 分别适配Pinterest、Instagram、Vogue Runway/Editorial、ShotDeck/FilmGrab、场地与模特平台；
-4. 给出同义词、反向词和需要避开的陈词滥调；
-5. 每组词注明要寻找的具体画面，以及对应八层方案中的哪一层。
+请根据我提供的品牌Brief、品牌白皮书、店铺截图、产品图片、样衣图或视觉参考图，生成可直接用于Cosmos和Pinterest搜索的英文视觉关键词组合。
 
-第二部分｜参考图分析
-我上传参考图后，请逐张记录：参考图ID、来源链接/作者、版权或使用状态、画面客观描述，以及它只用于参考什么。
-分析维度限定为：场景空间、人物与动作、服装妆发、置景道具、构图景别、摄影媒介、光线、色调、叙事节奏、产品权重。
+注意：我要的是“搜索关键词组合”，不是创意概念、风格总结、完整描述句、生图Prompt或品牌推荐。
 
-每张图必须明确：
-- 可借鉴：与本项目已确认方向一致的具体元素；
-- 不借鉴：与品牌、产品或制作条件冲突的元素；
-- 放入方案的位置：总情绪板或某一具体模块；
-- 是否仍需真实场地、服装、道具或版权核实。
+一、分析要求
 
-不要只给网站名单，不要因为画面“好看”就收入情绪板，不要把参考图描述成待复制的成片。</pre></article>
+生成关键词前，先逐项读取全部资料，并判断：
+
+1. 服装款式与廓形
+例如：修身上衣、挂脖上衣、不对称上衣、阔腿裤、低腰长裙、迷你裙、百慕大短裤、亮片上衣。
+
+2. 服装风格与使用场合
+例如：Office Siren、Party Glam、Western Boho、Sexy Casual、Resort Chic、Preppy、Minimal Tailoring。
+
+3. 模特画像与人物气质
+例如：Cool Girl、Sun-kissed Model、Confident Woman、Effortless Model、Sassy Model。
+
+4. 场景、背景与色调
+例如：Warm Neutral Studio、Greige Set、Textured Beige Backdrop、Dark Minimal Studio、Natural Sunlit Interior。
+
+5. 摄影与成片类型
+例如：Studio Lookbook、Commercial Fashion Campaign、Full-body Fashion Photography、Ecommerce Lookbook。
+
+以上内容必须来自已提供的图片和Brief。没有依据的内容不得自行添加。
+
+二、关键词组合公式
+
+每组关键词按照以下公式生成：
+
+服装款式/廓形
+＋服装风格/使用场合
+＋模特气质
+＋场景/色调
+＋摄影类型
+
+英文结构：
+
+Garment or Silhouette
++ Styling or Aesthetic
++ Model Persona
++ Set or Color
++ Photography Format
+
+三、关键词编写规则
+
+1. 每组关键词控制在6—12个英文单词。
+2. 使用名词和行业中常用的短语，不写完整句子。
+3. 每组关键词必须同时覆盖至少四个视觉维度，不能只写抽象风格。
+4. 优先使用平台能够识别的具体视觉词，例如：
+   - wide leg jeans
+   - black mini dress
+   - cool girl
+   - warm neutral studio
+   - studio lookbook
+5. 服装款式必须具体，避免只写fashion、womenswear、style。
+6. 风格词必须与服装造型对应，不能只根据文件名判断。
+7. 年代词如Y2K、90s、70s、retro只有在整组造型确实由该年代风格主导时才能使用。
+8. 不要单独使用以下宽泛词：
+   - modern
+   - contemporary
+   - feminine
+   - casual
+   - editorial
+   - high street
+   - aesthetic
+   - inspiration
+9. 如果使用宽泛词，必须与具体服装款式、人物气质和摄影类型组合。
+10. 优先加入studio lookbook、commercial fashion campaign等成片类型，减少穿搭拼贴、商品图、男性图片、历史档案和街拍。
+11. 不要使用具体品牌名代替视觉风格，除非我明确要求搜索竞品。
+12. 不要用年份、季度或季节强行缩小范围，除非它们会直接改变服装或视觉风格。
+13. 不要把参考组图中并不存在的风格强行统一。
+14. 如果一组图片横跨多个子风格，先提取真正共同的部分，再按不同服装或子风格分别生成关键词。
+15. 不得声称某个关键词一定有效；需要说明它预计召回的画面以及可能出现的偏差。
+
+四、输出内容
+
+先输出：
+
+A. 参考资料的共同视觉特征
+用简短条目说明：
+- 服装共性；
+- 人物共性；
+- 场景与色调共性；
+- 动作共性；
+- 摄影形式共性。
+
+B. 一组整体搜索关键词
+只在所有参考图确实存在共同风格时生成。
+格式：
+
+英文关键词：
+中文对应：
+覆盖维度：
+预计召回：
+可能偏差：
+
+C. 按服装款式或子风格生成3—8组关键词
+
+使用表格输出：
+
+| 对应款式/用途 | 英文关键词组合 | 中文对应 | 覆盖的视觉维度 | 预计召回画面 | 可能出现的偏差 |
+
+D. 推荐搜索顺序
+标出：
+1. 第一组优先测试的关键词；
+2. 搜索结果偏复古时应删除或替换哪个词；
+3. 搜索结果出现搭配拼贴时应增加哪个词；
+4. 搜索结果出现男性时应增加哪个词；
+5. 搜索结果偏街拍时应如何改为棚拍或商业型录。
+
+五、结果修正规则
+
+当我上传搜索结果截图时：
+
+1. 对照原始参考图分析偏差；
+2. 明确指出是哪一个关键词导致偏差；
+3. 只替换产生偏差的词，不要整组推翻；
+4. 保留已经正确召回的维度；
+5. 输出修改前、问题词、修改后关键词；
+6. 不得在没有验证的情况下继续堆叠抽象形容词。</pre></article>
         <article class="prompt" id="prompt-image"><button class="copy">复制</button><pre>把已确认的方向卡、八层视觉方案、产品图和参考图，编译成可用于[填写模型名称]的商业时尚摄影概念图Prompt。不得改变产品款式、结构、颜色、材质和标识；不得加入未确认的故事或品牌元素。
 
 先输出一份中文“画面控制单”，再输出适配目标模型的正式Prompt。控制单必须包含：
